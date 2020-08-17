@@ -1,0 +1,14 @@
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.csprojAssemblyReference.cache
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.csproj.CoreCompileInputs.cache
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.RazorAssemblyInfo.cache
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.RazorAssemblyInfo.cs
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.AssemblyInfoInputs.cache
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.AssemblyInfo.cs
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/bin/Debug/netcoreapp2.2/Yogurt.deps.json
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/bin/Debug/netcoreapp2.2/Yogurt.runtimeconfig.json
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/bin/Debug/netcoreapp2.2/Yogurt.runtimeconfig.dev.json
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/bin/Debug/netcoreapp2.2/Yogurt.dll
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/bin/Debug/netcoreapp2.2/Yogurt.pdb
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.RazorTargetAssemblyInfo.cache
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.dll
+/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/Debug/netcoreapp2.2/Yogurt.pdb

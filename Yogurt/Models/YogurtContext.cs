@@ -12,7 +12,7 @@ namespace Yogurt.Models
 
         public DbSet<Yogurt> Yogurts { get; set; }
 
-        // protected override void OnMOdelCreating(ModelBuilder builder)
+        // protected override void OnModelCreating(ModelBuilder builder)
         // {
 
         // }
