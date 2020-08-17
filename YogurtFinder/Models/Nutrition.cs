@@ -9,5 +9,6 @@ namespace YogurtFinder.Models
     public string Fat { get; set; }
     public string Carbs { get; set; }
     public string Calories { get; set; }
+    public virtual Yogurt Yogurt { get; set; }
   }
 }

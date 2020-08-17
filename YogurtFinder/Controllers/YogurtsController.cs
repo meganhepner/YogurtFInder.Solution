@@ -19,16 +19,34 @@ namespace YogurtFinder.Controllers
       }
         // GET api/yogurts
         [HttpGet]
-        public ActionResult<IEnumerable<Yogurt>> Get()
+        public ActionResult<IEnumerable<Yogurt>> Get(string brand, string flavor, bool blended, string type)
         {
-            return _db.Yogurts.ToList();
+          var query = _db.Yogurts.AsQueryable();
+
+          if (brand != null)
+          {
+          query = query.Where(entry => entry.Brand == brand);
+          }
+          if (flavor != null)
+          {
+          query = query.Where(entry => entry.Flavor == flavor);
+          }
+          if (blended != null)
+          {
+          query = query.Where(entry => entry.Blended == blended);
+          }
+          if (type != null)
+          {
+          query = query.Where(entry => entry.Type == type);
+          }
+            return query.ToList();
         }
 
         // GET api/yogurts/5
         [HttpGet("{id}")]
-        public ActionResult<string> Get(int id)
+        public ActionResult<Yogurt> Get(int id)
         {
-            return "value";
+            return _db.Yogurts.FirstOrDefault(entry => entry.YogurtId == id);
         }
 
         // POST api/yogurts
@@ -41,14 +59,20 @@ namespace YogurtFinder.Controllers
 
         // PUT api/yogurts/5
         [HttpPut("{id}")]
-        public void Put(int id, [FromBody] string value)
+        public void Put(int id, [FromBody] Yogurt yogurt)
         {
+          yogurt.YogurtId = id;
+          _db.Entry(Yogurt).State = EntityState.Modified;
+          _db.SaveChanges();
         }
 
         // DELETE api/yogurts/5
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
+          var yogurtToDelete = _db.Yogurts.FirstOrDefault(entry => entry.YogurtId == id);
+          _db.Yogurts.Remove(yogurtToDelete);
+          _db.SaveChanges();
         }
     }
 }
