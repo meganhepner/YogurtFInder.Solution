@@ -31,7 +31,7 @@ namespace YogurtFinder.Controllers
           {
           query = query.Where(entry => entry.Flavor == flavor);
           }
-          if (blended != null)
+          if (blended)
           {
           query = query.Where(entry => entry.Blended == blended);
           }
@@ -62,7 +62,7 @@ namespace YogurtFinder.Controllers
         public void Put(int id, [FromBody] Yogurt yogurt)
         {
           yogurt.YogurtId = id;
-          _db.Entry(Yogurt).State = EntityState.Modified;
+          _db.Entry(yogurt).State = EntityState.Modified;
           _db.SaveChanges();
         }
 
