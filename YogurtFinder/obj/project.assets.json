@@ -12155,11 +12155,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/Yogurt.csproj",
-      "projectName": "Yogurt",
-      "projectPath": "/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/Yogurt.csproj",
+      "projectUniqueName": "/Users/MamaJude/Desktop/Yogurt.Solution/YogurtFinder/YogurtFinder.csproj",
+      "projectName": "YogurtFinder",
+      "projectPath": "/Users/MamaJude/Desktop/Yogurt.Solution/YogurtFinder/YogurtFinder.csproj",
       "packagesPath": "/Users/MamaJude/.nuget/packages/",
-      "outputPath": "/Users/MamaJude/Desktop/Yogurt.Solution/Yogurt/obj/",
+      "outputPath": "/Users/MamaJude/Desktop/Yogurt.Solution/YogurtFinder/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"

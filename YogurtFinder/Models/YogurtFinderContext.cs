@@ -1,10 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 
-namespace Yogurt.Models
+namespace YogurtFinder.Models
 {
-  public class YogurtContext : DbContext
+  public class YogurtFinderContext : DbContext
   {
-    public YogurtContext(DbContextOptions<YogurtContext> options)
+    public YogurtFinderContext(DbContextOptions<YogurtFinderContext> options)
         : base(options)
         {
 

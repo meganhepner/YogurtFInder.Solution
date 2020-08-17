@@ -1,4 +1,4 @@
-namespace Yogurt.Models
+namespace YogurtFinder.Models
 {
   public class Nutrition
   {
