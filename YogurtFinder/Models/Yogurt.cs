@@ -4,10 +4,6 @@ namespace YogurtFinder.Models
 {
   public class Yogurt
   {
-    public Yogurt ()
-    {
-    this.Nutritions = new HashSet<Nutrition>();
-    }
 
     public int YogurtId { get; set; }
     public int NutritionId { get; set; }
@@ -15,7 +11,10 @@ namespace YogurtFinder.Models
     public string Flavor { get; set; }
     public bool Blended { get; set; }
     public string Type { get; set; }
-    // public Nutrition Nutrition { get; set; }
-    public virtual Nutrition Nutrition {get; set; }  
+    public string Protein { get; set; }
+    public string Sugar { get; set; }
+    public string Fat { get; set; }
+    public string Carbs { get; set; }
+    public string Calories { get; set; } 
     }
   }
