@@ -25,11 +25,11 @@ namespace YogurtFinder.Controllers
 
           if (brand != null)
           {
-          query = query.Where(entry => entry.Brand == brand);
+          query = query.Where(entry => entry.Brand.Contains(brand));
           }
           if (flavor != null)
           {
-          query = query.Where(entry => entry.Flavor == flavor);
+          query = query.Where(entry => entry.Flavor.Contains(flavor));
           }
           if (blended)
           {
@@ -37,7 +37,7 @@ namespace YogurtFinder.Controllers
           }
           if (type != null)
           {
-          query = query.Where(entry => entry.Type == type);
+          query = query.Where(entry => entry.Type.Contains(type));
           }
             return query.ToList();
         }
