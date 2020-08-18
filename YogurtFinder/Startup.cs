@@ -11,6 +11,7 @@ using Microsoft.IdentityModel.Tokens;
 using System.Text;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 
+
 namespace YogurtFinder
 {
     public class Startup
@@ -25,7 +26,17 @@ namespace YogurtFinder
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddCors();
+            services.AddCors(options => 
+            {
+                options.AddDefaultPolicy(
+                builder =>
+                {
+                    builder.WithOrigins("http://example.com", "https://localhost:5001");
+                });
+
+            });
+            
+
             services.AddDbContext<YogurtFinderContext>(opt =>
                 opt.UseMySql(Configuration.GetConnectionString("DefaultConnection")));
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -61,15 +72,16 @@ namespace YogurtFinder
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
-            app.UseCors(x => x
-                .AllowAnyOrigin()
-                .AllowAnyMethod()
-                .AllowAnyHeader());
+            // app.UseCors(x => x
+            //     .AllowAnyOrigin()
+            //     .AllowAnyMethod()
+            //     .AllowAnyHeader());
 
-            app.UseAuthentication();
+            // app.UseAuthentication();
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+ 
             }
             else
             {
@@ -77,6 +89,15 @@ namespace YogurtFinder
                 app.UseHsts();
             }
 
+            app.UseCors();
+    
+                // app.UseEndpoints(endpoints =>
+                // {
+                //     endpoints.MapControllers().RequireCors();
+                // });
+                
+            // app.UseRouting();   
+            // app.UseAuthorization();
             // app.UseHttpsRedirection();
             app.UseMvc();
         }
